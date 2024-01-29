@@ -9,3 +9,6 @@
 
 # Misc
 .env
+
+#Firebase 
+firebase-creds.json
