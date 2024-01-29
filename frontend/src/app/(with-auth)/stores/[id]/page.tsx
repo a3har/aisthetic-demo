@@ -81,6 +81,7 @@ export default function StoreDetailsPage({
                 src={image}
                 alt={name}
                 className="object-cover md:h-[40.3125rem] min-h-[26.5rem] h-[26.5rem] w-full transition-opacity duration-300 ease-in-out"
+                loading="lazy"
               />
               <div className="absolute bottom-0 left-0 w-full h-full flex justify-center items-center bg-white bg-opacity-70 transition-opacity duration-300 500 ease-in-out opacity-0 group-hover:opacity-100">
                 <span className="text-3xl font-black text-black text-opacity-20 w-[21.125rem] text-center">

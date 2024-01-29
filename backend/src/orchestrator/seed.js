@@ -19,7 +19,7 @@ export const SeedStores = async () => {
       },
       email: "hello@indiranagar.co",
       image:
-        "https://images.unsplash.com/photo-1588416936097-41850ab3d86d?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://www.tripsavvy.com/thmb/QS7YoZPIIgBNklph1Cjeq3mDgUk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-536116268-5b5d74e846e0fb0050adcf3b.jpg",
       description:
         "Lorem ipsum dolor sit amet consectetur. Sed ac scelerisque sed feugiat pellentesque sed. Erat vitae cras eleifend consequat euismod eu lorem quis ut. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc.",
       timings: [
@@ -96,7 +96,7 @@ export const SeedStores = async () => {
       },
       email: "hello@basavanagudi.co",
       image:
-        "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=80&w=3327&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://lp-cms-production.imgix.net/2019-06/9483508eeee2b78a7356a15ed9c337a1-bengaluru-bangalore.jpg",
       description:
         "Lorem ipsum dolor sit amet consectetur. Sed ac scelerisque sed feugiat pellentesque sed. Erat vitae cras eleifend consequat euismod eu lorem quis ut. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc.",
       timings: [
@@ -173,7 +173,7 @@ export const SeedStores = async () => {
       },
       email: "hello@kormangala.co",
       image:
-        "https://images.unsplash.com/photo-1580060092295-dbe639fffda3?q=80&w=3398&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://static.toiimg.com/photo/msid-49355736,width-96,height-65.cms",
       description:
         "Lorem ipsum dolor sit amet consectetur. Sed ac scelerisque sed feugiat pellentesque sed. Erat vitae cras eleifend consequat euismod eu lorem quis ut. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc.",
       timings: [
@@ -250,7 +250,7 @@ export const SeedStores = async () => {
       },
       email: "hello@jayanagar.co",
       image:
-        "https://images.unsplash.com/photo-1572500851416-1ae1d3763bf8?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://cdn.enjoytravel.com/img/travel-news/bangalore-is-the-silicon-valley-of-india.jpg",
       description:
         "Lorem ipsum dolor sit amet consectetur. Sed ac scelerisque sed feugiat pellentesque sed. Erat vitae cras eleifend consequat euismod eu lorem quis ut. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc.",
       timings: [
@@ -327,7 +327,7 @@ export const SeedStores = async () => {
       },
       email: "hello@bannerghatta.co",
       image:
-        "https://images.unsplash.com/photo-1564486593523-38d62206e706?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://www.99acres.com/microsite/wp-content/blogs.dir/6161/files/2023/07/Bangalore.jpg?1692180491",
       description:
         "Lorem ipsum dolor sit amet consectetur. Sed ac scelerisque sed feugiat pellentesque sed. Erat vitae cras eleifend consequat euismod eu lorem quis ut. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc. Id netus vestibulum id habitasse arcu enim nibh. Ornare viverra risus felis amet odio neque amet in nunc.",
       timings: [
