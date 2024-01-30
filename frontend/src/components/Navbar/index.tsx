@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 
 import { ChevronArrow } from "@/components/Icons"
 
-import BookAppointment from "./BookAppointment"
+import Logout from "./Logout"
 
 interface NavbarProps {
   backButtonProps?: {
@@ -82,7 +82,7 @@ export default function Navbar({ backButtonProps }: NavbarProps) {
         </div>
       )}
       <div className="flex flex-row items-center justify-end">
-        <BookAppointment />
+        <Logout />
       </div>
     </nav>
   )

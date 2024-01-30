@@ -5,7 +5,7 @@ import { signOut } from "firebase/auth"
 import api from "@/clients/api"
 import { auth } from "@/clients/firebase"
 
-export default function BookAppointment() {
+export default function Logout() {
   const router = useRouter()
   return (
     <div
@@ -19,7 +19,7 @@ export default function BookAppointment() {
         router.push("/login")
       }}
     >
-      Book an appointment
+      Logout
     </div>
   )
 }

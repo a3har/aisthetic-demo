@@ -4,6 +4,7 @@ const getBaseConfig = (options = {}) => {
     headers: {
       ...(!skipContentType ? { "Content-Type": "application/json" } : {}),
     },
+    cache: "no-store",
   }
 }
 
