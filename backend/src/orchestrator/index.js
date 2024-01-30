@@ -50,8 +50,10 @@ orchestrator.use(express.json())
 orchestrator.use("/api/store", verifyToken, storeRouter)
 
 // Health check
-orchestrator.use("/health", (req, res) => {
-  return res.status({ status: "OK" })
+orchestrator.get("/health", (req, res) => {
+  return res.status(200).json({
+    message: "OK",
+  })
 })
 
 orchestrator.listen(PORT, () => {
