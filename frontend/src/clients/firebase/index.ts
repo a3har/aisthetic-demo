@@ -7,12 +7,12 @@ import { GoogleAuthProvider, getAuth } from "firebase/auth"
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBv4dLTSK4KD8FS-7lJ5va2GiEd2Ow6Ls0",
-  authDomain: "aisthetic-demo.firebaseapp.com",
-  projectId: "aisthetic-demo",
-  storageBucket: "aisthetic-demo.appspot.com",
-  messagingSenderId: "53815538876",
-  appId: "1:53815538876:web:08edff1c5b60cf1e10ccb9",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   measurementId: "G-W03W3F6S0J",
 }
 

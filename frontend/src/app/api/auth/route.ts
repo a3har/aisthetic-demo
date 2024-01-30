@@ -14,9 +14,7 @@ export async function POST(request: NextRequest) {
   try {
     switch (type) {
       case "oauth-verify":
-        console.log("Oauth verify")
         const decodedToken = await auth().verifyIdToken(params.idToken)
-        console.log("Decoded Token", decodedToken)
         if (decodedToken) {
           //Generate session cookie
           const expiresIn = 60 * 60 * 24 * 5 * 1000
@@ -26,7 +24,6 @@ export async function POST(request: NextRequest) {
               expiresIn,
             }
           )
-          console.log("Session Cookie", sessionCookie)
           const options = {
             name: "session",
             value: sessionCookie,

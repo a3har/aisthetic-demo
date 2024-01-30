@@ -15,7 +15,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    getRedirectResult(auth).then(async (userCred) => {
+    getRedirectResult(auth).then(async (userCred): Promise<void> => {
       if (userCred?.user || auth.currentUser) {
         setLoading(false)
       } else {
@@ -29,19 +29,25 @@ export default function LoginPage() {
 
       try {
         const idToken = await userCred.user.getIdToken()
-        await api.post("/api/auth", {
-          type: "oauth-verify",
-          params: {
-            idToken,
-          },
-        })
+        try {
+          await api.post("/api/auth", {
+            type: "oauth-verify",
+            params: {
+              idToken,
+            },
+          })
+        } catch (err) {
+          console.log("Error verifying oauth token", err)
+        }
+
         router.push("/stores")
       } catch (err) {
+        console.log("Error getting id token", err)
         // TODO: Handle Auth Failure
-        // await api.post("/api/auth", {
-        //   type: "signout",
-        //   params: {},
-        // })
+        await api.post("/api/auth", {
+          type: "signout",
+          params: {},
+        })
       }
     })
   }, [])
