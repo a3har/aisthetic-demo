@@ -87,6 +87,53 @@ export default function StoreTimingsAccordian({
   )
 }
 
+function findNextOpenTiming(storeTimings: StoreTimings[], currentDay: number) {
+  let nextOpenDay = (currentDay + 1) % 7
+  let nextOpenTiming = storeTimings.find((timing) => timing.day === nextOpenDay)
+  if (nextOpenTiming && !nextOpenTiming.isClosed) {
+    return {
+      day: nextOpenDay,
+      timing: nextOpenTiming,
+      text: `Opens ${formatTime(
+        nextOpenTiming.startHour,
+        nextOpenTiming.startMinute
+      )}`,
+    }
+  }
+
+  if (storeTimings.every((timing) => timing.isClosed)) {
+    return {
+      day: null,
+      timing: null,
+      text: "Closed Indefinitely",
+    }
+  }
+
+  while (
+    !storeTimings.find((timing) => timing.day === nextOpenDay) ||
+    storeTimings.find((timing) => timing.day === nextOpenDay)?.isClosed
+  ) {
+    nextOpenDay = (nextOpenDay + 1) % 7
+  }
+
+  nextOpenTiming = storeTimings.find((timing) => timing.day === nextOpenDay)
+
+  return nextOpenTiming
+    ? {
+        day: nextOpenDay,
+        timing: nextOpenTiming,
+        text: `Opens ${DAYS[nextOpenDay]} ${formatTime(
+          nextOpenTiming.startHour,
+          nextOpenTiming.startMinute
+        )}`,
+      }
+    : {
+        day: null,
+        timing: null,
+        text: "Closed Indefinitely",
+      }
+}
+
 function getStoreStatus(storeTimings: StoreTimings[]) {
   const currentTime = new Date()
   const currentDay = currentTime.getDay()
@@ -98,25 +145,9 @@ function getStoreStatus(storeTimings: StoreTimings[]) {
   for (let timing of storeTimings) {
     if (timing.day === currentDay) {
       if (timing.isClosed) {
-        let nextOpenDay = (currentDay + 1) % 7
-        if (!storeTimings[nextOpenDay].isClosed) {
-          return `Opens ${formatTime(
-            storeTimings[nextOpenDay].startHour,
-            storeTimings[nextOpenDay].startMinute
-          )}`
-        }
-        while (storeTimings[nextOpenDay].isClosed) {
-          nextOpenDay = (nextOpenDay + 1) % 7
-        }
-        const nextOpenTiming = storeTimings.find(
-          (timing) => timing.day === nextOpenDay
-        )
-        return nextOpenTiming
-          ? `Opens ${DAYS[nextOpenDay]} ${formatTime(
-              nextOpenTiming.startHour,
-              nextOpenTiming.startMinute
-            )}`
-          : "Closed Indefinitely"
+        const nextOpenTiming = findNextOpenTiming(storeTimings, currentDay)
+
+        return nextOpenTiming.text
       } else {
         if (timing.startHour === null || timing.endHour === null) {
           return "24-hour open"
@@ -142,6 +173,10 @@ function getStoreStatus(storeTimings: StoreTimings[]) {
         } else if (currentTime >= openingTime && currentTime < closingTime) {
           return `Closes ${formatTime(timing.endHour, timing.endMinute)}`
         }
+
+        const nextOpenTiming = findNextOpenTiming(storeTimings, currentDay)
+
+        return nextOpenTiming.text
       }
     }
   }
